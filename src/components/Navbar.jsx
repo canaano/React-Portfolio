@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4  text-white'>
-        <h1 className='w-full text-3xl font-bold m-4 text-blue-500'>React.</h1>
+        <h1 className='w-full text-3xl font-bold m-4 text-blue-500'>Canaan Owens</h1>
         <ul className='hidden md:flex'>
             <li className='p-5'>About</li>
             <li className='p-5'>Projects</li>
@@ -21,7 +21,7 @@ const Navbar = () => {
             {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
         </div>
         <div className={!nav ? 'fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-500 bg-[#191919] ease-in-out duration-500' : 'fixed left-[-100%]'} >
-        <h1 className='w-full text-3xl font-bold text-blue-500 m-8'>React.</h1>
+        <h1 className='w-full text-3xl font-bold text-blue-500 m-8'>Canaan Owens</h1>
         <ul className='uppercase p-4'>
             <li className='p-5 border-b border-gray-500'>About</li>
             <li className='p-5 border-b border-gray-500'>Projects</li>
