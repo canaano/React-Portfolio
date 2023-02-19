@@ -14,7 +14,7 @@ const Hero = () => {
             </p>
             <div className='flex justify-center items-center'>
                 <p className='md:text-3xl sm:text-2xl text-xl p-2 font-bold'>I am skilled in</p>
-                <p className='md:text-3xl sm:text-2xl text-xl p-2 font-bold pl-1 font-family-[Permanent Marker]'>
+                <p className='md:text-3xl sm:text-2xl text-xl p-2 font-bold pl-1 font-Permanent text-blue-300'>
                 <Typewriter
                 options={{
                     strings: ['REACT', 'JAVASCRIPT', 'CSS', 'NODE.JS'],
