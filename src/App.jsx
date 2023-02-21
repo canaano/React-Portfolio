@@ -1,14 +1,19 @@
 import React from "react"
 import { useState } from "react"
 import Slider from "react-slick"
-import Card from "./components/Card"
-import { Card2, Card3, Card4 } from "./components/Card"
+import { Card } from "./components/Card"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import "./components/Card.css"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa" 
 
-const cards = [Card, Card2, Card3, Card4]
+const cards = [ 
+  { id: "card-1", name: 'Card 1', description: 'This is some description', buttonText: 'repo'}, 
+  { id: "card-2", name: 'Card poop', description: 'This is some description', buttonText: 'repo'}, 
+  { id: "card-3", name: 'Card 3', description: 'This is some description' , buttonText: 'repo'}, 
+  { id: "card-4", name: 'Card 4', description : 'This is some description', buttonText: 'repo'}
+];
+
 
 function App() {
 
@@ -62,11 +67,11 @@ return (
   <div>
     <Navbar />
     <Hero />
-    <div className="Slider">
-      <Slider>
-        {cards.map((card, index) => (
-          <div>
-            <Card />
+    <div className="Slider p-6">
+      <Slider {...settings} >
+        {cards.map((card) => (
+          <div key={card.id}>
+           <Card data={card}/>
           </div>
         ))}
       </Slider>
