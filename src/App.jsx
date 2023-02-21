@@ -1,18 +1,42 @@
-import React from "react"
+import React, { Component } from "react"
 import { useState } from "react"
+import Navbar from "./components/Navbar"
+import Hero from "./components/Hero"
 import Slider from "react-slick"
 import { Card } from "./components/Card"
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
 import "./components/Card.css"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa" 
 import Footer from "./components/Footer"
+import About from "./components/About"
 
 const cards = [ 
-  { id: "card-1", name: 'Open-Minded', description: 'Video-Chat Debate App', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
-  { id: "card-2", name: 'Card poop', description: 'This is some description', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
-  { id: "card-3", name: 'Card 3', description: 'This is some description' , buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
-  { id: "card-4", name: 'Card 4', description : 'This is some description', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}
+  { id: "card-1", 
+    name: 'Open-Minded', 
+    description: 'Drop in and join a private video conference to debate the worlds biggest issues.', 
+    buttonText: 'repo', 
+    link: 'https://github.com/canaano/Open-Minded', 
+    logo: './src/assets/Open-Mind-Logo.png'}, 
+
+  { id: "card-2",  
+    name: 'Surfs Up Surf Report', 
+    description: 'Find out if there are waves around YOU! Input your city and our application finds the local surf report.', 
+    buttonText: 'repo', 
+    link: 'https://github.com/canaano/Surfs-Up-Surf-Report', 
+    logo: './src/assets/Surfs-Up.png'},
+  
+  { id: "card-3", 
+    name: 'React Portfolio', 
+    description: 'Deployed Website of the work completed by Canaan Owens in a simple, yet effective, React Application' , 
+    buttonText: 'repo', 
+    link: 'https://github.com/canaano/React-Portfolio', 
+    logo: './src/assets/React-Port.png'},
+  
+  { id: "card-4", 
+    name: 'Password Generator', 
+    description : 'Create a unique, randomly generated password to protect yourself against hackers', 
+    buttonText: 'repo', 
+    link: 'https://github.com/canaano/PasswordGenerator', 
+    logo: './src/assets/PassGen.png'}
 ];
 
 
@@ -71,10 +95,13 @@ return (
     <div className="mb-[-100px]">
       <Hero />
     </div>
+    <div>
+      <About />
+    </div>
     <div className=" p-20 ">
       <Slider {...settings} >
         {cards.map((card) => (
-          <div key={card.id} className="p-3">
+          <div key={card.id} >
            <Card data={card} />
           </div>
         ))}
