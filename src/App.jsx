@@ -6,6 +6,7 @@ import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import "./components/Card.css"
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa" 
+import Footer from "./components/Footer"
 
 const cards = [ 
   { id: "card-1", name: 'Card 1', description: 'This is some description', buttonText: 'repo'}, 
@@ -67,15 +68,16 @@ return (
   <div>
     <Navbar />
     <Hero />
-    <div className="Slider p-6">
+    <div className="Slider p-10">
       <Slider {...settings} >
         {cards.map((card) => (
-          <div key={card.id}>
-           <Card data={card}/>
+          <div key={card.id} className="p-2 slide activeSlide">
+           <Card data={card} />
           </div>
         ))}
       </Slider>
     </div>
+    <Footer />
   </div>
 )
 
