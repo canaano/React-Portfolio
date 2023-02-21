@@ -61,11 +61,13 @@ function App() {
   const settings = {
     infinite: true,
     lazyload: true,
-    speed: 200,
+    speed: 3000,
     slidesToShow: 3,
     centerMode: true,
-    centerPadding: 0,
     slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "linear"
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
