@@ -8,8 +8,10 @@ export const Card = ({ data }) => {
         <div className='p-4'>
             <h2 className='font-bold'>{data.name}</h2>
             <p className='text-sm mt-3'>{data.description}</p>
-            <button className='bg-blue-500 text-white px-2 py-1 rounded-full mt-3' 
-            href="https://github.com/canaano/Open-Minded">{data.buttonText}</button>
+            <a href={data.link}>
+                <button className='bg-blue-500 text-white px-2 py-1 rounded-full mt-3'>
+                {data.buttonText}</button>
+            </a>
         </div>
     </div>
   )

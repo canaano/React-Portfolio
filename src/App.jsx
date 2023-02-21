@@ -9,10 +9,10 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import Footer from "./components/Footer"
 
 const cards = [ 
-  { id: "card-1", name: 'Card 1', description: 'This is some description', buttonText: 'repo'}, 
-  { id: "card-2", name: 'Card poop', description: 'This is some description', buttonText: 'repo'}, 
-  { id: "card-3", name: 'Card 3', description: 'This is some description' , buttonText: 'repo'}, 
-  { id: "card-4", name: 'Card 4', description : 'This is some description', buttonText: 'repo'}
+  { id: "card-1", name: 'Open-Minded', description: 'Video-Chat Debate App', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
+  { id: "card-2", name: 'Card poop', description: 'This is some description', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
+  { id: "card-3", name: 'Card 3', description: 'This is some description' , buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}, 
+  { id: "card-4", name: 'Card 4', description : 'This is some description', buttonText: 'repo', link: 'https://github.com/canaano/Open-Minded'}
 ];
 
 
@@ -37,12 +37,13 @@ function App() {
   const settings = {
     infinite: true,
     lazyload: true,
-    speed: 300,
+    speed: 200,
     slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    slidesToScroll: 3,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
   };
   
 // Normal layout
@@ -67,17 +68,21 @@ function App() {
 return (
   <div>
     <Navbar />
-    <Hero />
-    <div className="Slider p-10">
+    <div className="mb-[-100px]">
+      <Hero />
+    </div>
+    <div className=" p-20 ">
       <Slider {...settings} >
         {cards.map((card) => (
-          <div key={card.id} className="p-2 slide activeSlide">
+          <div key={card.id} className="p-3">
            <Card data={card} />
           </div>
         ))}
       </Slider>
     </div>
+    <div>
     <Footer />
+    </div>
   </div>
 )
 
