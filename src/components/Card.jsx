@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Card = ({ data }) => {
   return (
-    <div className='grid grid-cols-1 bg-white rounded-xl max-w-xs '>
+    <div id="projects" className='grid grid-cols-1 bg-white rounded-xl max-w-xs '>
         <img className='rounded-xl rounded-b-none' 
         src={data.logo}/>
         <div className='p-4'>
