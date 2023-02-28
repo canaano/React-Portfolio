@@ -7,7 +7,6 @@ import "./components/Card.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import { AiOutlineConsoleSql } from "react-icons/ai";
 import Contact from "./components/Contact";
 
 const cards = [
