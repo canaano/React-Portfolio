@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "./Image";
 
 export const Card = ({ data, isActive }) => {
   return (
@@ -10,7 +11,9 @@ export const Card = ({ data, isActive }) => {
         }`}
       >
         <div
-          style={{ backgroundImage: `url(${data.logo})` }}
+          style={{
+            backgroundImage: `url(${data.logo})`,
+          }}
           className="rounded-xl w-full bg-top-center bg-cover rounded-b-none h-64"
         ></div>
         <div className="p-4">

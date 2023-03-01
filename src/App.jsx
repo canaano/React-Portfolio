@@ -8,6 +8,10 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
+// import OmLogo from "/src/assets/Open-Mind-Logo.png";
+// import PassGen from "/src/assets/PassGen.png";
+// import SurfsUp from "/src/assets/Surfs-Up.png";
+// import ReactPort from "/src/assets/React-Port.png";
 
 const cards = [
   {
@@ -17,7 +21,7 @@ const cards = [
       "Drop in and join a private video conference to debate the worlds biggest issues.",
     buttonText: "repo",
     link: "https://github.com/canaano/Open-Minded",
-    logo: "./src/assets/Open-Mind-Logo.png",
+    logo: "Open-Mind-Logo.png",
   },
 
   {
@@ -27,7 +31,7 @@ const cards = [
       "Find out if there are waves around YOU! Input your city and our application finds the local surf report.",
     buttonText: "repo",
     link: "https://github.com/canaano/Surfs-Up-Surf-Report",
-    logo: "./src/assets/Surfs-Up.png",
+    logo: "Surfs-Up.png",
   },
 
   {
@@ -37,7 +41,7 @@ const cards = [
       "Deployed Website of the work completed by Canaan Owens in a simple, yet effective, React Application",
     buttonText: "repo",
     link: "https://github.com/canaano/React-Portfolio",
-    logo: "./src/assets/React-Port.png",
+    logo: "React-Port.png",
   },
 
   {
@@ -47,7 +51,7 @@ const cards = [
       "Create a unique, randomly generated password to protect yourself against hackers",
     buttonText: "repo",
     link: "https://github.com/canaano/PasswordGenerator",
-    logo: "./src/assets/PassGen.png",
+    logo: "PassGen.png",
   },
 ];
 
@@ -126,7 +130,6 @@ function App() {
                 ? currentActiveIndex === i ||
                   currentActiveIndex === (i + 1) % cards.length
                 : currentActiveIndex === i;
-            console.log(currentActiveIndex, isActive);
             return (
               <div key={card.id}>
                 <Card isActive={isActive} data={card} />
